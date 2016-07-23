@@ -10,8 +10,8 @@ using System.IO;
  * Date : July 19th, 2016
  * Date Modified: Jul 22th, 2016
  * Description : Assignment 5 File I/O
- * Version : 1.1 - 
- *                  Redo the while loop
+ * Version : 1.2 - 
+ *                  Final Version
  */
 namespace Assignment_5
 {
@@ -32,11 +32,13 @@ namespace Assignment_5
                             const string myfile = "..\\..\\Grade.txt";
                             List<Students> students = new List<Students>();
                             const char DELIM = ',';
+                            // opening filestream
                             FileStream inFile = new FileStream(myfile, FileMode.Open, FileAccess.Read);
                             StreamReader reader = new StreamReader(inFile);
+                            // setup variables to temporariliy hold my data
                             string recordIN;
                             string[] fields;
-
+                            // read from file and assign the record to recordIN
                             recordIN = reader.ReadLine();
 
                             Console.WriteLine("Enter your file to load");
@@ -45,7 +47,6 @@ namespace Assignment_5
                                 string filename = (Console.ReadLine());
                             if (filename == "Grade")
                             {
-
                                 while (recordIN != null)
                                 {
                                     Students student = new Students();
@@ -63,14 +64,11 @@ namespace Assignment_5
                                     student.Grade);
                                     recordIN = reader.ReadLine();
                                 }
-
-                                }
-                                else
-                                {
+                            }
+                            else
+                            {
                                     Console.WriteLine("File does not exist");
-                                }
-                                
-                            
+                            }
 
                             break;
                         case 2:
