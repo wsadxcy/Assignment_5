@@ -1,0 +1,6 @@
+Bobby, 001, Introduction to Computer Science, A
+John, 002, Data Structures, B+
+Cobe, 003, Programing 2, B
+Nick, 004, Data Structures, A+
+Sam, 005, Programming 3, C
+Mary, 006, Intro to Database, B-
